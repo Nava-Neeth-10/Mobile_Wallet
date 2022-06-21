@@ -1,0 +1,771 @@
+{
+	"info": {
+		"_postman_id": "cd760a68-8e23-42ba-ae62-65692babb65c",
+		"name": "Mobile Wallet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "LoginUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"vivekpk\",\"password\":\"vivek1212\"}"
+						},
+						"url": {
+							"raw": "localhost:8080/User/LoginUser",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"User",
+								"LoginUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"first_name\":\"Vivek\",\"middle_name\":\"\",\"last_name\":\"Pindikanti\",\"email\":\"pindikantivivek@gmail.com\",\"username\":\"vivekpk\",\"password\":\"vivek1212\",\"userType\":\"CUST\",\"mobileno\":\"8939090098\",\"countrycode\":\"91\",\"dob\":\"\"}"
+						},
+						"url": {
+							"raw": "localhost:8080/User/CreateUser",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"User",
+								"CreateUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateUserwithMobileNo",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"mobileno\":\"8939090098\",\"deviceid\":\"abcdef\"}"
+						},
+						"url": {
+							"raw": "localhost:8080/User/CreateUserwithMobileNo",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"User",
+								"CreateUserwithMobileNo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginUserwithMobileNo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"mobileno\":\"8939090098\",\"deviceid\":\"abcdef\"}"
+						},
+						"url": {
+							"raw": "localhost:8080/User/LoginUserwithMobileNo",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"User",
+								"LoginUserwithMobileNo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ValidateOTP",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"mobileno\":\"8939090098\",\"otp\":\"5010\"}"
+						},
+						"url": {
+							"raw": "localhost:8080/User/ValidateOTP",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"User",
+								"ValidateOTP"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ForgetPassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"vivekpk\"}"
+						},
+						"url": {
+							"raw": "localhost:8080/User/ForgetPassword",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"User",
+								"ForgetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangePassword",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"vivekpk\",\"currentpassword\":\"vivek1212\",\"newpassword\":\"123456\"}"
+						},
+						"url": {
+							"raw": "localhost:8080/User/ChangePassword",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"User",
+								"ChangePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserDetails",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"mobileno\":\"8939090098\"}"
+						},
+						"url": {
+							"raw": "localhost:8080/User/UserDetails",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"User",
+								"UserDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ModifyUserDetails",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"first_name\":\"Vivek\",\"middle_name\":\"\",\"last_name\":\"Pindi\",\"dob\":\"\",\"searchkey\":\"pindikantivivek@gmail.com\",\"keyname\":\"Email\"}"
+						},
+						"url": {
+							"raw": "localhost:8080/User/ModifyUserDetails",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"User",
+								"ModifyUserDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InviteUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"mobileno\":\"8939090098\",\"mobilenoinvite\":\"8939090098\"}"
+						},
+						"url": {
+							"raw": "localhost:8080/User/InviteUser",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"User",
+								"InviteUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Wallet",
+			"item": [
+				{
+					"name": "CreateWallet",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"mobileno\": \"8939090098\",\"currency\": \"INR\",\"status\": \"ACTIVE\"}"
+						},
+						"url": {
+							"raw": "localhost:8080/Wallet/CreateWallet",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Wallet",
+								"CreateWallet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeWalletStatus",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"mobileno\":\"8939090098\",\"walletid\":\"97295527864261\",\"status\":\"ACTIVE\"}"
+						},
+						"url": {
+							"raw": "localhost:8080/Wallet/ChangeWalletStatus",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Wallet",
+								"ChangeWalletStatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SingleWalletDetails",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"walletid\":\"53060126160579\"}"
+						},
+						"url": {
+							"raw": "localhost:8080/Wallet/SingleWalletDetails",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Wallet",
+								"SingleWalletDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MultipleWalletDetails",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"mobileno\":\"8939090098\",\"sortby\":\"ASC\",\"status\":\"ALL\"}"
+						},
+						"url": {
+							"raw": "localhost:8080/Wallet/MultipleWalletDetails",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Wallet",
+								"MultipleWalletDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BlockRegion",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"walletid\": \"53060126160579\",\"region\": \"CA\"}"
+						},
+						"url": {
+							"raw": "localhost:8080/Wallet/BlockRegion",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Wallet",
+								"BlockRegion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LinkCard",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"walletid\":\"16624856765843\",\"cardno\":\"1111222233334444\",\"cvv\":\"123\",\"expiry\":\"2030-12-01\",\"cardissuer\":\"HDFC\"}"
+						},
+						"url": {
+							"raw": "localhost:8080/Wallet/LinkCard",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Wallet",
+								"LinkCard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DelinkCard",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"walletid\":\"53060126160579\",\"cardno\":\"4444\",\"cardissuer\":\"HDFC\"}"
+						},
+						"url": {
+							"raw": "localhost:8080/Wallet/DelinkCard",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Wallet",
+								"DelinkCard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCardBalance",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"walletid\":\"16624856765843\",\"cardno\":\"4444\",\"cardissuer\":\"HDFC\"}"
+						},
+						"url": {
+							"raw": "localhost:8080/Wallet/GetCardBalance",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Wallet",
+								"GetCardBalance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "WalletsByMobile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"mobileno\":\"8939090098\"}"
+						},
+						"url": {
+							"raw": "localhost:8080/Wallet/WalletsByMobile",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Wallet",
+								"WalletsByMobile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetWalletBalance",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"walletid\":\"94475622294922\"}"
+						},
+						"url": {
+							"raw": "localhost:8080/Wallet/GetWalletBalance",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Wallet",
+								"GetWalletBalance"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment",
+			"item": [
+				{
+					"name": "AddFromBank",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"walletid\":\"16624856765843\",\"cardno\":\"4444\",\"cardissuer\":\"HDFC\",\"amount\":\"100\"}"
+						},
+						"url": {
+							"raw": "localhost:8080/Payment/AddFromBank",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Payment",
+								"AddFromBank"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddToBank",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"walletid\":\"16624856765843\",\"cardno\":\"4444\",\"cardissuer\":\"HDFC\",\"amount\":\"100\"}"
+						},
+						"url": {
+							"raw": "localhost:8080/Payment/AddToBank",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Payment",
+								"AddToBank"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SendToFriend",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"senderwalletid\":\"47498109646953\",\"receiverwalletid\":\"80232729942183\",\"money\":\"10\",\"deviceid\":\"12MF3\"}"
+						},
+						"url": {
+							"raw": "localhost:8080/Payment/SendToFriend",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Payment",
+								"SendToFriend"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SendToMultiple",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"senderwalletid\":\"16624856765843\",\"receiverwalletid\":\"22976687662207,92160994983532\",\"money\":\"200\",\"deviceid\":\"abcdef\"}"
+						},
+						"url": {
+							"raw": "localhost:8080/Payment/SendToMultiple",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Payment",
+								"SendToMultiple"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
